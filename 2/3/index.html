@@ -8,13 +8,13 @@
     <h1>Задание №1</h1>
     <ul>
         <li>
-            <a href="http://www.kubsu.ru/index.php"title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
+            <a href="http://www.kubsu.ru/index.php" title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
         </li>
         <li>
-            <a href="https://www.kubsu.ru/index.php"title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
+            <a href="https://www.kubsu.ru/index.php" title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
         </li>
         <li>
-            <a href="https://www.kubsu.ru/index.php" target = "_blank"><img src="image.jpg" width="200" height="200" width="600"></a>
+            <a href="https://www.kubsu.ru/index.php" target = "_blank"><img alt="Flower" src="image.jpg" width="200" height="200"></a>
         </li>
         <li>
             <a href="f.html">Ссылка на внутреннюю страницу</a>
@@ -26,10 +26,10 @@
             <a href="#top">Ссылка на фрагмент текущей страницы</a>
         </li>
         <li>
-            <a href = "index.html"?id=100&name=albastar&flex=no>Ссылка с тремя параметрами в URL </a>
+            <a href = "?action=1&debug=off&flex=no">Ссылка с тремя параметрами в URL </a>
         </li>
         <li>
-            <a href = "index.html"?id=101>Ссылка параметром id в URL </a>
+            <a href = "?id=101">Ссылка параметром id в URL </a>
         </li>
         <li>
             <a href = "./f1.html">Относительная на страницу в текущем каталоге </a>
@@ -47,14 +47,14 @@
             <pre>Контекстную <a href = "http://www.kubsu.ru/index.php" target = "_blank">ссылка</a> в тексте абзаца</pre>
         </li>
         <li>
-            <a href = https://html5book.ru/hyperlinks-in-html/#part6:~:text=2.2 target = "_blank">Ссылка на фрагмент страницы стороннего сайта </a>
+            <a href = "https://html5book.ru/hyperlinks-in-html/#part6:~:text=2.2" target = "_blank">Ссылка на фрагмент страницы стороннего сайта </a>
         </li>
         <li>
             Ссылки из прямоугольных и круглых областей картинки 
-        <img src="Изображение1.jpg"usemap="#f">
+        <img src="Изображение1.jpg" alt="painting" usemap="#f">
         <map name="f">
-            <area shape="circle" coords="520, 464, 100" href="f1.html" target="_blank">
-            <area shape="rect" coords="137,79,958,294" href= "f1.html" target="_blank">
+            <area shape="circle" coords="520,464,100" href="f1.html" target="_blank" alt="circle">
+            <area shape="rect" coords="137,79,958,294" href= "f1.html" target="_blank" alt="rect">
         </map>
         </li>
         <li>
@@ -67,7 +67,7 @@
             <a href="http://example.ru" rel="nofollow" target = "_blank">Cсылка, по которой запрещен переход поисковикам</a>
         </li>
         <li>
-            <a href="http://example.ru" target = "_blank"><noindex>Запрещенная для индексации поисковиками</noindex></a>
+            <a href="http://example.ru" target = "_blank"><!-- <noindex> -->Запрещенная для индексации поисковиками<!-- </noindex> --></a>
         </li>
         <li>
         Нумерованный список ссылок с подписями title
@@ -81,7 +81,7 @@
         <a href="ftp://user:pass123@link.ru/Temp/file.txt" target = "_blank">Ссылка на файл на сервере FTP с авторизацией</a>
         </li>
     </ul>
-    <p><a name="top"></a>...</p> 
+    <p><a id="top"></a>...</p> 
     <a href="./form.html"><b style="font-size: 70px; color: rgb(50, 100, 255)">Форма</b></a>
 
 </body>
