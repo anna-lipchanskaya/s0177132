@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Задание №1</title>
+</head>
+<body>
+    <h1>Задание №1</h1>
+    <ul>
+        <li>
+            <a href="http://www.kubsu.ru/index.php"title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
+        </li>
+        <li>
+            <a href="https://www.kubsu.ru/index.php"title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
+        </li>
+        <li>
+            <a href="https://www.kubsu.ru/index.php" target = "_blank"><img src="image.jpg" width="200" height="200" width="600"></a>
+        </li>
+        <li>
+            <a href="f.html">Ссылка на внутреннюю страницу</a>
+        </li>
+        <li>
+            <a href="index.html">Ссылка на главную страницу</a>
+        </li>
+        <li>
+            <a href="#top">Ссылка на фрагмент текущей страницы</a>
+        </li>
+        <li>
+            <a href = "index.html"?id=100&name=albastar&flex=no>Ссылка с тремя параметрами в URL </a>
+        </li>
+        <li>
+            <a href = "index.html"?id=101>Ссылка параметром id в URL </a>
+        </li>
+        <li>
+            <a href = "./f1.html">Относительная на страницу в текущем каталоге </a>
+        </li>
+        <li>
+            <a href = "./about/about.html">Относительная на страницу в каталоге about </a>
+        </li>
+        <li>
+            <a href = "../f3.html">Относительная на страницу в каталоге уровнем выше текущего</a>
+        </li>
+        <li>
+            <a href="../../f2.html">Относительная на страницу в каталоге двумя уровнями выше</a>
+        </li>
+        <li>
+            <pre>Контекстную <a href = "http://www.kubsu.ru/index.php" target = "_blank">ссылка</a> в тексте абзаца</pre>
+        </li>
+        <li>
+            <a href = https://html5book.ru/hyperlinks-in-html/#part6:~:text=2.2 target = "_blank">Ссылка на фрагмент страницы стороннего сайта </a>
+        </li>
+        <li>
+            Ссылки из прямоугольных и круглых областей картинки 
+        <img src="Изображение1.jpg"usemap="#f">
+        <map name="f">
+            <area shape="circle" coords="520, 464, 100" href="f1.html" target="_blank">
+            <area shape="rect" coords="137,79,958,294" href= "f1.html" target="_blank">
+        </map>
+        </li>
+        <li>
+            <a href = "">Ссылка с пустым href</a>
+        </li>
+        <li>
+            <a>Ссылка без href</a>
+        </li>
+        <li>
+            <a href="http://example.ru" rel="nofollow" target = "_blank">Cсылка, по которой запрещен переход поисковикам</a>
+        </li>
+        <li>
+            <a href="http://example.ru" target = "_blank"><noindex>Запрещенная для индексации поисковиками</noindex></a>
+        </li>
+        <li>
+        Нумерованный список ссылок с подписями title
+        <ol>
+            <li><a href= "https://www.google.ru" title="Google" target = "_blank">Google</a></li>
+            <li><a href= "https://yandex.ru" title="Яндекс" target = "_blank">Яндекс</a></li>
+            <li><a href= "https://mail.ru/" title="mail" target = "_blank">Mail</a></li>
+        </ol>
+        </li>
+        <li>
+        <a href="ftp://user:pass123@link.ru/Temp/file.txt" target = "_blank">Ссылка на файл на сервере FTP с авторизацией</a>
+        </li>
+    </ul>
+    <p><a name="top"></a>...</p> 
+    <a href="./form.html"><b style="font-size: 70px; color: rgb(50, 100, 255)">Форма</b></a>
+
+</body>
+</html>
