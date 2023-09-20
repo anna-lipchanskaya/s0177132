@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Задание №2</title>
+    <link rel="stylesheet" href = "style.css">
+        
+</head>
+<body style="margin:0">
+    <header>
+    <div>
+        <img class="painting" src="image1.png" alt="Картинка" />
+        <div class="menu" id = "menu">
+            <a href = "#painting">картинка</a>
+            <a href = "#table">таблица</a>
+            <a href = "#form">форма</a>
+        </div>
+        <h1 class = "text">Цветочек</h1>
+      </div>
+      </header>
+      <nav class = "nav" id = "menu">
+        <h3><a href = "#link">список гиперссылок</a></h3>
+        <h3><a href = "#table">таблица</a></h3>
+        <h3><a href = "#form">форма</a></h3>
+      </nav>
+      <div class = "text" id = "link">Список гиперссылок</div>
+    <ul>
+        <li>
+            <a href="http://www.kubsu.ru/index.php" title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
+        </li>
+        <li>
+            <a href="https://www.kubsu.ru/index.php" title="Официальный сайт Кубанского государственного университета" target = "_blank">КубГу</a>
+        </li>
+        <li>
+            <a href="https://www.kubsu.ru/index.php" target = "_blank" id = "painting"><img alt="Flower" src="image.jpg" width="200" height="200"></a>
+        </li>
+        <li>
+            <a href="f.html">Ссылка на внутреннюю страницу</a>
+        </li>
+        <li>
+            <a href="index.html">Ссылка на главную страницу</a>
+        </li>
+        <li>
+            <a href="#top">Ссылка на фрагмент текущей страницы</a>
+        </li>
+        <li>
+            <a href = "?action=1&debug=off&flex=no">Ссылка с тремя параметрами в URL </a>
+        </li>
+        <li>
+            <a href = "?id=101">Ссылка параметром id в URL </a>
+        </li>
+        <li>
+            <a href = "./f1.html">Относительная на страницу в текущем каталоге </a>
+        </li>
+        <li>
+            <a href = "./about/about.html">Относительная на страницу в каталоге about </a>
+        </li>
+        <li>
+            <a href = "../f3.html">Относительная на страницу в каталоге уровнем выше текущего</a>
+        </li>
+        <li>
+            <a href="../../f2.html">Относительная на страницу в каталоге двумя уровнями выше</a>
+        </li>
+        <li>
+            <pre>Контекстную <a href = "http://www.kubsu.ru/index.php" target = "_blank">ссылка</a> в тексте абзаца</pre>
+        </li>
+        <li>
+            <a href = "https://html5book.ru/hyperlinks-in-html/#part6:~:text=2.2" target = "_blank">Ссылка на фрагмент страницы стороннего сайта </a>
+        </li>
+        <li>
+            Ссылки из прямоугольных и круглых областей картинки 
+        <img src="Изображение1.jpg" alt="painting" usemap="#f">
+        <map name="f">
+            <area shape="circle" coords="520,464,100" href="f1.html" target="_blank" alt="circle">
+            <area shape="rect" coords="137,79,958,294" href= "f1.html" target="_blank" alt="rect">
+        </map>
+        </li>
+        <li>
+            <a href = "">Ссылка с пустым href</a>
+        </li>
+        <li>
+            <a>Ссылка без href</a>
+        </li>
+        <li>
+            <a href="http://example.ru" rel="nofollow" target = "_blank">Cсылка, по которой запрещен переход поисковикам</a>
+        </li>
+        <li>
+            <a href="http://example.ru" target = "_blank"><!-- <noindex> -->Запрещенная для индексации поисковиками<!-- </noindex> --></a>
+        </li>
+        <li>
+        Нумерованный список ссылок с подписями title
+        <ol>
+            <li><a href= "https://www.google.ru" title="Google" target = "_blank">Google</a></li>
+            <li><a href= "https://yandex.ru" title="Яндекс" target = "_blank">Яндекс</a></li>
+            <li><a href= "https://mail.ru/" title="mail" target = "_blank">Mail</a></li>
+        </ol>
+        </li>
+        <li>
+        <a href="ftp://user:pass123@link.ru/Temp/file.txt" target = "_blank">Ссылка на файл на сервере FTP с авторизацией</a>
+        </li>
+    </ul>
+    <p><a id="top"></a>...</p> 
+    <table>
+        <div class = "text" id = "table">Таблица</div>
+        <thead>
+
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+                <th>Колонка 4</th>
+            </tr>
+        
+          </thead>
+        <tr>
+            <td colspan="2">Ячейка 11 объединенная с 12</td>
+            <td>Ячейка 13</td>
+            <td>Ячейка 14</td>
+        </tr>
+        <tr>
+          <td>Ячейка 21</td>
+          <td>Ячейка 22</td>
+          <td>Ячейка 23</td>
+          <td>Ячейка 24</td>
+        </tr>
+        <tr>
+            <td colspan="4">Ячейка 31 - 34</td>         
+        </tr>
+        <tr>
+            <td>Ячейка 41</td>
+            <td colspan="3">Ячейка 42 - 44</td>         
+        </tr>
+        <tr>
+            <td>Ячейка 51</td>
+            <td>Ячейка 52</td>
+            <td colspan="2">Ячейка 53 объединенная с 54</td>
+        </tr>
+        <tr>
+            <td>Ячейка 61</td>
+            <td colspan="2">Ячейка 62 объединенная с 63</td>
+            <td>Ячейка 64</td>
+        </tr>
+      </table>
+      <br>
+      <div class = "text" id = "form">Форма</div>
+        <form>
+            <label>
+            ФИО:<br />
+            <input name="field-name-1"
+            placeholder="Введите ваше ФИО" />
+            </label><br />
+            <label>
+            Телефон:<br />
+            <input name="field-phone"
+            type="tel"
+            placeholder="Введите ваш телефон" />
+        </label><br />
+        <label>
+            Email:<br />
+            <input name="field-email"
+            type="email"
+            placeholder="Введите вашу почту" /></label>
+            <label>
+                <br />
+                Дата рождения:<br />
+                <input name="field-date"
+                value="2023-09-14"
+                type="date" />
+            </label><br />
+            Пол:<br />
+        <label><input type="radio" checked="checked"
+            name="radio-group-1" value="Значение1" />
+            Мужской</label>
+        <label><input type="radio"
+            name="radio-group-1" value="Значение2" />
+            Женский</label><br />
+            <label>
+            Любимый язык программирования:
+            <br />
+                <select name="love-language[]" multiple>
+                    <option disabled>Выберите любимый язык пр.</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala  ">Scala </option>
+                </select>
+            </label><br />
+            <label>
+            Биография:<br />
+            <textarea name="field-name-2" placeholder="Ваша биография" ></textarea>
+            </label><br />
+        <label><input type="checkbox" checked="checked"
+            name="check-1" />
+            С контрактом ознакомлен(а)</label><br />
+            <br />
+            <input type="submit" value="Сохранить" />
+      </form>
+      <br>
+      <footer>
+        <div class = "fon1">(c) Липчанская Анна</div>
+      </footer>
+
+</body>
+</html>
