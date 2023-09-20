@@ -24,6 +24,13 @@ nav {
     padding-top: 3%;
     border: 2px solid rgba(8, 30, 96, 0.152);
       }
+.nav a{
+    margin-left: 3%;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    margin-top:20px;
+}
     table {
 
 border-collapse: collapse;
@@ -103,9 +110,8 @@ div.menu
     text-align: center;
     border: 2px solid rgba(8, 30, 96, 0.152);
 }
-div.text
+h2.text
 {
-    font-size: 30px;
     color :rgba(148, 161, 200, 0.986);
 }
 h1.text
