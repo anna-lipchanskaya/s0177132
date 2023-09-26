@@ -30,7 +30,7 @@ header {
   #f main{
     order:2;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1300px) {
     header{
       height:150px;
     }
