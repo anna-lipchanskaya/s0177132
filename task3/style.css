@@ -30,6 +30,13 @@ header {
   #f main{
     order:2;
   }
+  #f aside{
+    order: 3;
+  }
+  #f footer
+  {
+    order:4;
+  }
   @media screen and (min-width: 1300px) {
     header{
       height:150px;
