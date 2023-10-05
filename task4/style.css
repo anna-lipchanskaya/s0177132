@@ -4,20 +4,29 @@ header {
   padding: 10px; 
   height:80px;
   }
-  #main-aside-wrapper {
-    display: flex;
-    flex-direction: column;
+  body {
+    font-size: 12pt;
+    padding: 10px;
   }
-  #main-aside-wrapper nav {
-    order: 2;
+  nav{
+    background-color:#ccc;
+    border: 2px solid rgba(8, 30, 96, 0.152);
+  }
+  footer {
+    background-position: center top;
+    background-size: 100%;
+    background-color: rgba(148, 161, 200, 0.986);
+    height:40px;
+    }
+  h1 {
+    margin-top: 15px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  #m nav {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 30px;
-    width:100%; 
-  }
-  #main-aside-wrapper figcaption {
-    order: 1;
   }
   #f{
     display: flex;
@@ -41,19 +50,10 @@ header {
     header{
       height:150px;
     }
-  #main-aside-wrapper nav {
+  #m nav {
     text-align: center;
-    order: 1;
     display: flex;
     flex-direction: row;
-    max-width:100%;
-    margin-left:200px;
-    margin-top:20px;
-    padding-bottom: 10px;
-    height: 50px;
-  }
-  #main-aside-wrapper figcaption {
-    order: 2;
   }
   #f section{
     order: 2;
@@ -63,15 +63,6 @@ header {
     order:1;
   }
 }
-
-footer {
-  background-position: center top;
-  background-size: 100%;
-  }
-nav {
-  background-color:#ccc;
-  border: 2px solid rgba(8, 30, 96, 0.152);
-  }
 #menu a {
   margin-left: 3%;
   font-size: large;
@@ -135,7 +126,7 @@ img.painting
   left: 0;
   width: 70px;
   padding: 1px 1px 1px 1px;
-  margin-left: 3%;
+  margin-left: 4%;
   min-height: 1vh;
   float: left;
 
@@ -143,8 +134,4 @@ img.painting
 h2.text
 {
   color :rgba(148, 161, 200, 0.986);
-}
-h1.text
-{
-  margin-left:120px;
 }
