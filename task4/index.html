@@ -4,20 +4,35 @@
     <meta charset="utf-8" />
     <title>Задание №4</title>
     <link rel="stylesheet" href = "style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1">     
 </head>
-<body style="margin:0">
-    <header id = "main-aside-wrapper">
-        <img class="painting" src="image1.png" alt="Картинка"/>
-        <nav id = "menu">
-            <a href = "#link">гиперссылки</a>
-            <a href = "#table">таблица</a>
-            <a href = "#form">форма</a>
-        </nav>
-    <figcaption><h1 class = "text">Цветочек</h1></figcaption>
+<body>
+    <div class = "container-fluid">
+        <header id ="m">
+            <div class="row d-flex mx-2">
+            <img class="painting" src="image1.png" alt="Картинка"/>
+            <div class = "col-md-9 order-sm-2 mt-3">
+            <nav class id = "menu">
+                <a href = "#link">гиперссылки</a>
+                <a href = "#table">таблица</a>
+                <a href = "#form">форма</a>
+            </nav>
+        </div>
+    <div class="col-md-3 order-sm-1 mt-md-5">
+    <div class = "row justify-content-center">
+    <h1>Цветочек</h1>
+    </div>
+    </div>
+    </div>
       </header>
+      </div>
     <div id = "f">
       <main>
       <h2 class = "text" id = "link">Список гиперссылок</h2>
@@ -97,7 +112,7 @@
         </li>
     </ul>
     <p><a id="top"></a>...</p> 
-    </main>
+</main>
     <section>
     <h2 class = "text" id = "table">Таблица</h2>
     <table>
@@ -141,14 +156,12 @@
         </tr>
       </table>
     </section>
-
-    </div>
+    <aside>
       <br>
-      <aside>
         <h2 class = "text" id = "form">Форма</h2>
         <form>
             <label>
-            ФИО:<br />
+            ФИО:<br/>
             <input required name="field-name-1"
             placeholder="Введите ваше ФИО" />
             </label><br />
@@ -159,7 +172,7 @@
             placeholder="Введите ваш телефон" />
         </label><br />
         <label>
-            Email:<br />
+            Email:<br/>
             <input required name="field-email"
             type="email"
             placeholder="Введите вашу почту" /></label>
@@ -208,8 +221,8 @@
     </aside>
       <br>
       <footer>
-        <div class = "fon1">(c) Липчанская Анна</div>
+        <div>(c) Липчанская Анна</div>
       </footer>
-
+      </div>
 </body>
 </html>
