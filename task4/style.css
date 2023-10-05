@@ -1,0 +1,150 @@
+header {
+  background-color: rgba(148, 161, 200, 0.986);
+  width:100%; 
+  padding: 10px; 
+  height:80px;
+  }
+  #main-aside-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  #main-aside-wrapper nav {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+    width:100%; 
+  }
+  #main-aside-wrapper figcaption {
+    order: 1;
+  }
+  #f{
+    display: flex;
+    flex-direction: column;
+  }
+  #f section{
+    order: 1;
+    margin-top:150px;
+  }
+  #f main{
+    order:2;
+  }
+  #f aside{
+    order: 3;
+  }
+  #f footer
+  {
+    order:4;
+  }
+  @media screen and (min-width: 1300px) {
+    header{
+      height:150px;
+    }
+  #main-aside-wrapper nav {
+    text-align: center;
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    max-width:100%;
+    margin-left:200px;
+    margin-top:20px;
+    padding-bottom: 10px;
+    height: 50px;
+  }
+  #main-aside-wrapper figcaption {
+    order: 2;
+  }
+  #f section{
+    order: 2;
+    margin-top:0px;
+  }
+  #f main{
+    order:1;
+  }
+}
+
+footer {
+  background-position: center top;
+  background-size: 100%;
+  }
+nav {
+  background-color:#ccc;
+  border: 2px solid rgba(8, 30, 96, 0.152);
+  }
+#menu a {
+  margin-left: 3%;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+  margin-top:20px;
+}
+  table {
+
+border-collapse: collapse;
+
+margin: 0px auto;
+
+}
+
+th, td {
+
+border: solid 1px #000;
+
+padding: 5px;
+
+}
+
+tbody tr:nth-child(odd) {
+
+  background-color: #0099fe;
+
+}
+
+tbody tr:nth-child(even) {
+
+  background-color: #0098fe92;
+
+}
+
+tr:hover td{
+
+background: #B4FFF2;
+
+}
+div.fon1 {
+background-color:rgba(148, 161, 200, 0.986);
+background-position: center top;
+padding: 20px;
+height:10px;
+font-size: 13pt;
+width:100%;
+}
+div.name {
+font-size: 35pt;
+font-family: "Courier New", monotype;
+font-weight: bold;
+font-style: italic;
+line-height: 120%;
+  }
+img.painting
+{
+  border-radius: 80%;
+  border: solid rgba(148, 161, 200, 0.986);
+  position: absolute;
+  left: 0;
+  width: 70px;
+  padding: 1px 1px 1px 1px;
+  margin-left: 3%;
+  min-height: 1vh;
+  float: left;
+
+}
+h2.text
+{
+  color :rgba(148, 161, 200, 0.986);
+}
+h1.text
+{
+  margin-left:120px;
+}
