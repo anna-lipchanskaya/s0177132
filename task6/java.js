@@ -29,7 +29,7 @@ function calculate() {
   }
  
   if (quantity_of_goods.value < 0) {
-    result_field.innerHTML = "Введите целое или больше 0";
+    result_field.innerHTML = "0";
     return;
   }
  
