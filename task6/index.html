@@ -11,7 +11,7 @@
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">     
-
+ 
     <script src="java.js" defer></script>
 </head>
 <body>
@@ -118,7 +118,7 @@
     <h2 class = "text" id = "table">Таблица</h2>
     <table>
         <thead>
-
+ 
             <tr>
                 <th>Колонка 1</th>
                 <th>Колонка 2</th>
@@ -221,36 +221,40 @@
       </form>
     </aside>
     <figcaption>
-    <h2 class = "text" id = "form">Подсчет стоимости товара</h2>
-    Общая стоимоть: <div id="result"></div>
-<form>
-    <input name="field1" type="number" min = "0" placeholder="Введите количество товара">
-    <select name="select1">
-        <option value="v1">Розы</option>
-        <option value="v2">Фиалки</option>
-        <option value="v3">Орхидеи</option>
-        <option value="v4">Тульпаны</option>
-      </select>
-    <div name = "myradios">
-        <label><input type="radio" name="myradio" value="r1">Букет</label>
-        <label><input type="radio" name="myradio" value="r2">Корзинка</label>
-        <label><input type="radio" name="myradio" value="r3">В горшке</label>
-      </div>
-      <div>
-      <select name = "myselect1" class="myselect1" id="myselect1">
-        <option value="s1">Бюджетная</option>
-        <option value="s2">Средняя</option>
-        <option value="s3">Дорогая</option>
-      </select>
-    <fieldset name = "myselect2" class="myselect2" id="myselect2">
-          <input type="checkbox"/>
-          <label value = "c1">С удобрением</label>
-          <input type="checkbox"/>
-          <label value = "c2">2</label>
-      </fieldset>
+    <h2 class = "text">Подсчет стоимости товара</h2>
+    <form class="col-md-4">
+        <div class = "col row">
+        <input class="col-md-9" required type="number" min = "0" id="quantity_of_goods" placeholder="Введите количество товара">
+ 
+        <select class="col" id="goods_type">
+            <option value="v1">Розы</option>
+            <option value="v2">Фиалки</option>
+            <option value="v3">Орхидеи</option>
+            <option value="v4">Тульпаны</option>
+        </select>
     </div>
-  <button id="button1" onclick="return click1();">Подсчет</button>
-</form>
+        <div class="col m-2" id="radios">
+            <p><input required type="radio" id="radio_button_checked_by_default" name="service_type" value="Flowers">Букет</p>
+            <p><input required type="radio" name="service_type" value="Aubergine">Корзинка</p>
+            <p><input required type="radio" name="service_type" value="Loans">Горшочек</p>
+        </div>
+ 
+        <select id="aubergine_options">
+          <option name="freshness" value="s1">Маленькая</option>
+          <option name="freshness" value="s2">Средняя</option>
+          <option name="freshness" value="s3">Большая</option>
+        </select>
+ 
+        <div id="loan_options">
+          <input class="me-2" required type="checkbox" name="loan_options_type" value="с1">С удобрением
+          <input class="me-2" required type="checkbox" name="loan_options_type" value="с2">Запасной горшочек
+        </div>
+        <div class="col">
+            <h4>Общая стоимоть:</h4><div class = "h4" id="result"></div>
+        </div>
+        <button type="button" class="col-md-4" id="calculate_button">Подсчет</button>
+      </form>
+ 
 </figcaption>
       <br>
       <footer>
