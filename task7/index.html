@@ -2,14 +2,16 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <title>Задание №5</title>
+    <title>Задание №7</title>
     <link rel="stylesheet" href = "style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Jj72AvfmPK0IE99YhCvzWdNxiGAir3sWwxfh4mplntAcIS7YVkeug4BDBXtS30G-Je6yrfS09TdL_yhpm41e_ZOmLvMgltCXF3LED__9fE8" charset="UTF-8"></script><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="galery.js" defer=""></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">     
 
     <script src="java.js" defer></script>
@@ -222,37 +224,62 @@
     </aside>
     <figcaption>
     <h2 class = "text">Подсчет стоимости товара</h2>
-    <form class="col-md-4">
+    <form>
         <div class = "col row">
-        <input class="col-md-9" required type="number" min = "0" id="quantity_of_goods" placeholder="Введите количество товара">
-
-        <select class="col" id="goods_type">
-            <option value="v1">Розы</option>
-            <option value="v2">Фиалки</option>
-            <option value="v3">Орхидеи</option>
-            <option value="v4">Тульпаны</option>
-        </select>
-    </div>
-        <div class="col m-2" id="radios">
-            <p><input required type="radio" id="radio_button_checked_by_default" name="service_type" value="Flowers">Букет</p>
-            <p><input required type="radio" name="service_type" value="Aubergine">Корзинка</p>
-            <p><input required type="radio" name="service_type" value="Loans">Горшочек</p>
+            <input class="col-md-9" required type="number" min = "0" id="quantity_of_goods" placeholder="Введите количество товара">
+     
+            <select class="col" id="goods_type">
+                <option value="v1">Розы</option>
+                <option value="v2">Фиалки</option>
+                <option value="v3">Орхидеи</option>
+                <option value="v4">Тульпаны</option>
+            </select>
         </div>
+            <div class="col m-2" id="radios">
+                <p><input required type="radio" id="radio_button_checked_by_default" name="service_type" value="Flowers">Букет</p>
+                <p><input required type="radio" name="service_type" value="Aubergine">Корзинка</p>
+                <p><input required type="radio" name="service_type" value="Loans">Горшочек</p>
+            </div>
+     
+            <select id="aubergine_options">
+              <option name="freshness" value="s1">Маленькая</option>
+              <option name="freshness" value="s2">Средняя</option>
+              <option name="freshness" value="s3">Большая</option>
+            </select>
+     
+            <div id="loan_options">
+              <input class="me-2" required type="checkbox" name="loan_options_type" value="с1">С удобрением
+              <input class="me-2" required type="checkbox" name="loan_options_type" value="с2">Запасной горшочек
+            </div>
+            <div class="col">
+                <h4>Общая стоимость:</h4><div class = "h4" id="result"></div>
+            </div>
+            <button type="button" class="col-md-4" id="calculate_button" style="background-color:rgba(148, 161, 200, 0.986)">Подсчет</button>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
 
-        <select id="aubergine_options">
-          <option name="freshness" value="s1">Маленькая</option>
-          <option name="freshness" value="s2">Средняя</option>
-          <option name="freshness" value="s3">Большая</option>
-        </select>
+              <button type="button" id="buttonLeft" class="col me-2 rounded" style="background-color:rgba(148, 161, 200, 0.986)">
+                &#8592;
+              </button>
 
-        <div id="loan_options">
-          <input class="me-2" required type="checkbox" name="loan_options_type" value="с1">С удобрением
-          <input class="me-2" required type="checkbox" name="loan_options_type" value="с2">Запасной горшочек
+              <img id="image1" class="col sm" src="1.jpg" width="120" height="100">
+              <img id="image2" class="col sm" src="2.jpg" width="120" height="100">
+              <img id="image3" class="col sm" src="3.jpg" width="120" height="100">
+
+              <button type="button" id="buttonRight" class="col ms-2 rounded" style="background-color:rgba(148, 161, 200, 0.986)">
+                &#8594;
+              </button>
+
+            </div>
+          </div>
+          <div class="col mt-2"> 
+            <span id="pager" style="align-items: center">
+                1/8
+            </span>
+          </div>
         </div>
-        <div class="col">
-            <h4>Общая стоимоть:</h4><div class = "h4" id="result"></div>
-        </div>
-        <button type="button" class="col-md-4" id="calculate_button">Подсчет</button>
       </form>
 
 </figcaption>
