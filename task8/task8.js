@@ -91,4 +91,24 @@ $(function(){
             }
         });
     };     
-}( jQuery ))
+});
+area.onchange = function(e1) {
+    localStorage.setItem("text", e1.target.value)
+    }
+    if(localStorage.text) area.value = localStorage.text
+phone.onchange = function(e2) {
+    localStorage.setItem("number", e2.target.value)
+    }
+    if(localStorage.number) phone.value = localStorage.number
+mail.onchange = function(e3) {
+    localStorage.setItem("email", e3.target.value)
+    }
+    if(localStorage.email) mail.value = localStorage.email
+orz.onchange = function(e4) {
+    localStorage.setItem("orz", e4.target.value)
+    }
+    if(localStorage.orz) orz.value = localStorage.orz
+coob.onchange = function(e5) {
+    localStorage.setItem("coob", e5.target.value)
+    }
+    if(localStorage.coob) coob.value = localStorage.coob
