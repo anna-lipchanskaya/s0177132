@@ -1,12 +1,12 @@
 let imageList = [
     "image2.jpeg",
-    "image3.jpg",
-    "image4.jpg",
+    "image3.jpeg",
+    "image4.jpeg",
     "image5.jpeg",
     "image6.jpeg",
-    "image7.jpg",
-    "image8.jpg",
-    "image9.jpg",
+    "image7.jpeg",
+    "image8.jpeg",
+    "image9.jpeg",
   ];
   
   let image1 = document.getElementById("image1");
