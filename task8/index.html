@@ -225,6 +225,41 @@
             <input type="submit" value="Сохранить" />
       </form>
     </aside>
+    <figcaption>
+        <h2 class = "text">Подсчет стоимости товара</h2>
+        <form>
+            <div class = "col row">
+                <input class="col-md-9" required type="number" min = "0" id="quantity_of_goods" placeholder="Введите количество товара">
+         
+                <select class="col" id="goods_type">
+                    <option value="v1">Розы</option>
+                    <option value="v2">Фиалки</option>
+                    <option value="v3">Орхидеи</option>
+                    <option value="v4">Тульпаны</option>
+                </select>
+            </div>
+                <div class="col m-2" id="radios">
+                    <p><input required type="radio" id="radio_button_checked_by_default" name="service_type" value="Flowers">Букет</p>
+                    <p><input required type="radio" name="service_type" value="Aubergine">Корзинка</p>
+                    <p><input required type="radio" name="service_type" value="Loans">Горшочек</p>
+                </div>
+         
+                <select id="aubergine_options">
+                  <option name="freshness" value="s1">Маленькая</option>
+                  <option name="freshness" value="s2">Средняя</option>
+                  <option name="freshness" value="s3">Большая</option>
+                </select>
+         
+                <div id="loan_options">
+                  <input class="me-2"  type="checkbox" name="loan_options_type" value="с1">С удобрением
+                  <input class="me-2"  type="checkbox" name="loan_options_type" value="с2">Запасной горшочек
+                </div>
+                <div class="col">
+                    <h4>Общая стоимость:</h4><div class = "h4" id="result"></div>
+                </div>
+                <button type="button" class="col-md-4" id="calculate_button" style="background-color:rgba(148, 161, 200, 0.986)">Подсчет</button>
+            <br>
+        </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <form 
 id = "myForm"
@@ -275,7 +310,7 @@ id = "myForm"
 </div>
     </div>
 </div>
-
+</figcaption>
       <br>
       <footer>
         <div>(c) Липчанская Анна</div>
