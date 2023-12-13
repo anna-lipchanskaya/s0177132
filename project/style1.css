@@ -1,0 +1,579 @@
+* { box-sizing: border-box; }
+body {
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+header {
+  text-align: center;
+}
+.paint{
+  border-radius: 50%;
+}
+.otc
+{
+  margin-left: 170px;
+  margin-right: 170px;
+}
+.container {
+  margin: 0 auto; /* Расположение по центру */
+  max-width: 960px; /* Максимальная ширина контейнера */
+  padding: 20px; /* Отступы от краев */
+  display: block;
+}
+.fon
+{
+  margin: 0px;
+  background-image: url('фон2.gif');
+}
+header a {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  transition: .3s ease-in-out;
+}
+.logo {
+  color: #D5B45B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  padding: 20px 0;
+}
+nav {
+  display: table;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topmenu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.topmenu > li {
+  width: 25%;
+  float: left;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+.topmenu > li > a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #404040;
+  padding: 15px 30px;
+}
+.topmenu li a:hover { color: #D5B45B; }
+.submenu-link:after {
+  font-family: "FontAwesome";
+  color: inherit;
+  margin-left: 10px;
+}
+.submenu {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 180px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: #404040;
+  font-size: 12px;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.submenu li:last-child a { border-bottom: none; }
+.topmenu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.painting 
+{
+  pointer-events: none;
+  height: 200px;
+  width: 350px;
+}
+.A { grid-area: a; }
+.B { grid-area: b; }
+.C { grid-area: c; }
+.D { grid-area: d; }
+.E { grid-area: e; }
+.F { grid-area: f; }
+.container1 {
+  margin-left: 10px;
+  display: grid;
+  grid-template-areas: "a a a a a c c c e e e"
+                       "a a a a a c c c e e e"
+                       "a a a a a c c c e e e"
+                       "a a a a a d d d f f f"
+                       "b b b b b d d d f f f"
+                       "b b b b b d d d f f f";
+}
+.block2
+{
+  margin: 20px;
+  text-align: center;
+}
+
+.container3
+{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.box01 {
+  position: relative;
+  width: 250px;
+  height: 340px;
+  background-color: rgba(255, 255, 255, 0.538);
+  margin: 10px;
+  box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.1);
+}
+#box01img img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  float:right;
+  width: 30%;
+}
+.row
+{
+  display: flex;
+  justify-content: center;
+}
+#menu img {
+  margin-top:13px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+}
+.btn:hover{
+  background-color: rgb(236, 147, 231);
+}
+.btn { 
+  background-color: transparent;
+  border: 2px solid #000; /* Толщина и цвет бордюра */
+  color: #000; /* Цвет текста кнопки */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 16px; /* Внутренние отступы кнопки */
+  margin: 4px 2px;
+  cursor: pointer;
+} 
+#flower img
+{
+  height: 100px;
+  width: 130px;
+}
+.container4 {
+  display: flex;
+  align-items: center;
+}
+
+.text4 {
+  margin: 10px;
+  padding-left: 20px;
+  border-left: 4px solid #be1ab6;
+}
+
+.image4 {
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+}
+.fon2 {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.container5
+{
+  display: flex;
+  justify-content: center;
+}
+.block5 {
+  position: relative;
+  box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.1);
+  border: 1px solid black;
+  margin: 50px;
+  width: 270px;
+  height: 370px;
+  background-color: rgb(232, 231, 231);
+  transition: transform 0.3s;
+}
+.tarif
+{
+  border-bottom: 0.5px solid rgba(98, 96, 96, 0.289);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.checklist li::before {
+  content: "✔";
+  color: #be1ab6;
+  margin-left: 0px;
+}
+.checklist{
+  list-style: none;
+}
+#block5 h2{
+  font-size: 30px;
+  color: rgb(213, 44, 205);
+}
+.block5.active {
+  transform: scale(1.2);
+}
+
+.block5:hover {
+  transform: scale(1.2);
+}
+.block5:hover .btn5{
+  background-color: rgb(236, 147, 231);
+}
+.block5.active .btn5
+{
+  background-color: rgb(236, 147, 231);
+}
+.btn5{
+  position: absolute;
+  left: 10%;
+  top: 88%;
+  height: 30px;
+  width: 200px;
+  background-color: transparent;
+  border: 0.5px solid #000; /* Толщина и цвет бордюра */
+  color: #000; /* Цвет текста кнопки */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.container6{
+  display: flex;
+  justify-content: center;
+}
+.block6 p{
+  margin: 0%;
+}
+.block6
+{
+  display: flex;
+  flex-direction: column;
+  margin:20px;
+  width: 230px;
+  height: 230px;
+  background-color: #e8d5d5;
+}
+.container7{
+  display: flex;
+  justify-content: center;
+}
+.block7{
+  margin:30px;
+  width: 190px;
+  height: 240px;
+  background-color: #ffffff;
+}
+.image7
+{
+  width: 190px;
+  height: 190px;
+}
+.container8 {
+  justify-content: center;
+}
+.block81
+{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+}
+.block82
+{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 650px;
+  height: 350px;
+  margin: 10px;
+}
+.text-overlay8 {
+  position: absolute;
+  left:20px;
+  bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.container8 a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.container8 a:hover
+{
+  color: #850074;
+  text-decoration: underline;
+}
+.imgmin{
+  border-radius: 5%;
+  width: 350px;
+  height: 350px;
+}
+.imgmax
+{
+  border-radius: 5%;
+  width: 650px;
+  height: 350px;
+}
+.container9 {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.slide h3{
+  text-align: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(77, 15, 74, 0.584);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Стили для стрелки влево */
+.left {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+/* Стили для стрелки вправо */
+.right {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.image-slider {
+  margin: 2px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  transition: scroll 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.image-slider img {
+  border: 0.5px solid rgb(57, 57, 57);
+  border-radius: 5%;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+}
+.hidden-text {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: lightblue;
+  transition: height 0.5s
+}
+.show {
+  height: 100px; /* Высота выезжающего текста */
+}
+
+.clickable {
+  cursor: pointer;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+.accordion p{
+  font-size: 18px;
+}
+
+.accordion h3 {
+  background: #ffffff url(images/arrow-square.gif);
+  padding: 7px 15px;
+  margin: 0;
+  font: bold 120%/100% Arial, Helvetica, sans-serif;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.accordion h3:hover {
+  background-color: #ffa2e3;
+}
+
+.accordion h3.active {
+  background-color: #ffa2e3;
+  background-position: right 5px;
+}
+
+.accordion p {
+  background-color: #ffa2e3;
+  border-top: 0px;
+  background: #ffffff;
+  margin: 0;
+  padding: 10px 15px 20px;
+}
+
+.wedding {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+.form-inner:before {
+  display: inline-block;
+  margin-top: -45px;
+  content: url(https://html5book.ru/wp-content/uploads/2017/05/form-flower.png);
+}
+.form-inner {
+  padding: 0 40px 10px;
+  margin-top: 45px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, .1);
+}
+.form-inner h2 {
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+}
+.form-content {
+  position: relative;
+  margin: 30px -40px 0 -40px;
+  padding: 10px 40px 0 40px;
+  background: #FFF8F3;
+}
+.form-content:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+}
+.form-content h3 {
+  font-family: 'Marck Script', cursive;
+  font-size: 22px;
+  color: #898989;
+  font-weight: normal;
+}
+.form-content input, .form-content select {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #DDDDDD;
+  font-size: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #808080;
+  outline: none;
+}
+.form-content input {
+  width: 100%;
+}
+.form-content input:focus, .form-content select:focus {
+  border-color: #C44D58;
+}
+.form-content input[type="submit"] {
+  margin: 20px 0;
+  padding: 0 10px;
+  background: #FF6B6B;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-width: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s linear
+}
+.form-content input[type="submit"]:hover {
+  background: #C44D58;
+}
+.block91
+{
+  margin-top: 100px;
+  text-align: center;
+  width: 500px;
+  margin-left: 100px;
+}
+.block92{
+  margin-left: 200px;
+  margin-right: 100px;
+  width: 500px;
+}
+.block93{
+  justify-content: right;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.img93
+{
+  height: 30px;
+  width: 30px;
+}
+footer {
+  padding: 0;
+  margin: 0;
+  height: 750px;
+  display: flex;
+  background: #f9aab2;
+}
+.imgform
+{
+  height: 50px;
+  width: 50px;
+}
+#formp p{
+  width: 40px;
+  height: 40px;
+  margin: 50px;
+}
