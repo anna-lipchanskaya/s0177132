@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="icon" type="image/png" href="flower.png">
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <title>Sakura</title>
+    <link rel="stylesheet" href = "style1.css">
+</head>
+<body onload="startAutoScroll()">
+  <script>
+    function scrollToFragment() {
+      var element = document.getElementById("myForm");
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    </script>
+  <div class = "fon">
+    <div>
+    <header>
+        <img class="painting" src="logo2.png" alt="Картинка"/>
+        <nav>
+            <ul class="topmenu">
+              <li><a href="./project.html">Главная</a></li>
+              <li><a href="" class="submenu-link">О нас</a>
+                <ul class="submenu">
+                  <li><a href="#prz">Производство</a></li>
+                  <li><a href="#maz">Магазин</a></li>
+                  <li><a href="#ser">Сервис</a></li>
+                </ul>
+              </li>
+              <li><a href="">Проекты</a></li>
+              <li><a href="#myForm">Контакты</a></li>
+            </ul>
+          </nav>
+      </header>
+    </div>
+      <br>
+      <div class="container1" id = "menu">
+
+        <div class="A">
+          <h1>Цветочный магазин<br>Sakura - это цветочный рай</h1></div>
+        <div class="B">Реализуем все ваши хотелки. Любые идеи, любая сложность
+            <br>
+            <button class = "btn" onclick="scrollToFragment()">Заказать</button>
+            </div>
+        <div class="C" style="display: flex;"><img class="paint" src="значок.gif" alt="Картинка"/><h3>Cредний опыт специалистов <br>более 10 лет</h3></div>
+        <div class="D" style="display: flex;"><img class="paint" src="значок.gif" alt="Картинка"/><h3>№1 цветочный магазин<br>в России</h3></div>
+        <div class="E" style="display: flex;"><img class="paint" src="значок.gif" alt="Картинка"/><h3>Идей для вашего подарка более 500</h3></div>
+        <div class="F" style="display: flex;"><img class="paint" src="значок.gif" alt="Картинка"/><h3>Созданных проектов более 1000</h3></div>
+    </div>
+</div>
+<div class = "otc">
+  <div style = "display: flex;" id = "prz">
+    <h1>Что вы можете заказать</h1><img style = "height: 100px; width: 100px;" src="фото.gif" alt="Картинка"/>
+  </div>
+  <div class = "row" id = "flower" style = "margin-left:100px;">
+  <div class = "block2"><img class="paint" src="розы.jpeg" alt="Картинка"/><h3>Розы</h3></div>
+  <div class = "block2"><img class="paint" src="тюльпаны.jpg" alt="Картинка"/><h3>Тюльпаны</h3></div>
+  <div class = "block2"><img class="paint" src="орхидеи.jpg" alt="Картинка"/><h3>Орхидеи</h3></div>
+  <div class = "block2"><img class="paint" src="пионы.jpg" alt="Картинка"/><h3>Пионы</h3></div>
+</div>
+<div class = "row" id = "flower" style = "margin-left:100px;">
+  <div class = "block2"><img class="paint" src="лилии.jpg" alt="Картинка"/><h3>Лилии</h3></div>
+  <div class = "block2"><img class="paint" src="георгины.jpg" alt="Картинка"/><h3>Георгины</h3></div>
+  <div class = "block2"><img class="paint" src="подсолнухи.jpg" alt="Картинка"/><h3>Подсолнухи</h3></div>
+  <div class = "block2"><img class="paint" src="Геоцины.jpg" alt="Картинка"/><h3>Геоцины</h3></div>
+</div>
+  <div style = "display: flex;" id = "prz">
+    <h1>Почему вы должны выбрать именно нас</h1><img style = "height: 100px; width: 100px;" src="фото4.gif" alt="Картинка"/>
+  </div>
+  <div class = "container3" id ="box01img">
+    <div class = "row">
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">01.</h4><h2>Постановка задачи по Email</h2><h4 style="color:rgb(102, 100, 100)">
+      Удобная и привычная модель постановки задач, при которой ваш заказ фиксируются и никогда не теряются.</h4></div>
+    <img src="support1.svg"></div>
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">02.</h4><h2>Система Helpdesk – отчетность, прозрачность</h2><h4 style="color:rgb(102, 100, 100)">
+        Возможность посмотреть все заявки в работе и отработанные часы в личном кабинете через браузер. Более 1000 заказов уже выполнено!</h4></div>
+    <img src="support2.svg"></div>
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">03.</h4><h2>Расширенная техническая поддержка</h2><h4 style="color:rgb(102, 100, 100)">
+        Возможность организации расширенной техподдержки с 6:00 до 22:00 без выходных.</h4></div>
+    <img src="support3.svg"></div>
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">04.</h4><h2>Персональный менеджер заказа</h2><h4 style="color:rgb(102, 100, 100)">
+        Ваш менеджер заказа всегда в курсе текущего состояния заказа и в любой момент готов ответить на любые вопросы.</h4></div>
+    <img src="support4.svg"></div>
+  </div>
+  <div class = "row">
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">05.</h4><h2>Удобные способы оплаты</h2><h4 style="color:rgb(102, 100, 100)">
+        Безналичный расчет по договору или электронные деньги: WebMoney, Яндекс.Деньги, Paypal.</h4></div>
+    <img src="support5.svg"></div>
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">06.</h4><h2>Работаем с любым уровнем сложности заказа</h2><h4 style="color:rgb(102, 100, 100)">
+        Работа в рамках соглашений о конфиденциальности и об уровне качества работ.</h4></div>
+    <img src="support6.svg"></div>
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">07.</h4><h2>Штатные специалисты</h2><h4 style="color:rgb(102, 100, 100)">
+        Надежные штатные специалисты, никаких фрилансеров.</h4></div>
+    <img src="support7.svg"></div>
+    <div class = "box01">
+      <div style="width: 70%; float: left;"><h4 style="color:rgb(102, 100, 100)">08.</h4><h2>Удобные каналы связи</h2><h4 style="color:rgb(102, 100, 100)">
+        Консультации по телефону, скайпу, в месенджерах.</h4></div>
+    <img src="support8.svg"></div>
+  </div>
+  </div>
+  <div class="container4">
+      <div class="image">
+        <img style="height: 400px; width: 400px;  pointer-events: none;" src="букет3.jpg" alt="Описание картинки">
+    </div>
+    <div>
+        <h1>Опыт наших работников достигает 17 лет!</h1>
+        <div class = "row">
+          <div class = "text4"><h3>Индивидуальный подход к каждому клиенту!</h3></div>
+          <div class = "text4"><h3>Участвуем в различных выставках цветов!</h3></div>
+        </div>
+        <div class = "row">
+          <div class = "text4"><h3>Уникальные идеи и крутая их реализация!</h3></div>
+          <div class = "text4" style="margin-right: 183px;"><h3>Лучшая команда!</h3></div>
+        </div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center;justify-content: center;" id = "maz">
+  <h1>Оформления</h1>
+</div>
+<div class = "container5" id = "block5">
+<div class="block5"><h2  style = "margin-left: 90px;">Букет</h2>
+<div class = "tarif"><h1 style="margin-left: 20px;">От 5000 ₽</h1></div>
+<ul class="checklist">
+  <li>Цветовая гармония</li>
+  <li>Разнообразия цветов и форм</li>
+  <li>Свежесть и здоровье цветов</li>
+  <li>Баланс и пропорции</li>
+  <li>Дополнительны элементы</li>
+</ul>
+<button class = "btn5" onclick="scrollToFragment()">заказать</button>
+</div>
+<div class="block5 active"><h2  style = "margin-left: 70px;">Корзинка</h2>
+  <div class = "tarif"><h1 style="margin-left: 20px;">От 7000 ₽</h1></div>
+  <ul class="checklist">
+    <li><strong>Стильная корзинка</strong></li>
+    <li>Цветовая гармония</li>
+    <li>Разнообразия цветов и форм</li>
+    <li>Свежесть и здоровье цветов</li>
+    <li>Баланс и пропорции</li>
+    <li>Дополнительны элементы</li>
+  </ul>
+  <button class = "btn5" onclick="scrollToFragment()">заказать</button>
+  </div>
+  <div class="block5"><h2  style = "margin-left: 85px;">Горшок</h2>
+    <div class = "tarif"><h1 style="margin-left: 20px;">От 10000 ₽</h1></div>
+    <ul class="checklist">
+      <li><strong>Прекрасный горшочек</strong></li>
+      <li><strong>Долгое хранение цветов</strong></li>
+      <li>Цветовая гармония</li>
+      <li>Разнообразия цветов и форм</li>
+      <li>Свежесть и здоровье цветов</li>
+      <li>Баланс и пропорции</li>
+      <li>Дополнительны элементы</li>
+    </ul>
+    <button class = "btn5" onclick="scrollToFragment()">заказать</button>
+    </div>
+    <script>
+      var blocks = document.querySelectorAll('.block5');
+      blocks.forEach(function(block) {
+          block.addEventListener('mouseover', function() {
+              blocks.forEach(function(b) {
+                  b.classList.remove('active');
+              });
+              block.classList.add('active');
+          });
+      });
+  </script>
+  </div>
+  <br>
+  <div>
+    <div style="display: flex;">
+    <h1>Наши профессиональные работники<br>выполняют быстро любые заказы</h1><img style = "height: 100px; width: 100px; margin-left: 5px;" src="фото1.gif" alt="Картинка"/>
+  </div>
+    <div class = "container6">
+    <div class = "block6">
+      <img style = "height: 150px; width: 150px; margin: 0%;" src="букет.jpg" alt="Картинка"/>
+      <div style="margin-left: 10px;"><h3><strong style="font-size: 30px;">От 1ч</strong><br>Сборка букета</h3></div>
+    </div>
+    <div class = "block6">
+      <img style = "height: 150px; width: 150px; margin: 0%;" src="корзинка.jpg" alt="Картинка"/>
+      <div style="margin-left: 10px;"><h3><strong style="font-size: 30px;">От 2ч</strong><br>Сборка корзинки</h3></div>
+    </div>
+    <div class = "block6">
+      <img style = "height: 150px; width: 150px; margin: 0%;" src="горшочек.jpg" alt="Картинка"/>
+      <div style="margin-left: 10px;"><h3><strong style="font-size: 30px;">От 4ч</strong><br>Сборка горшочка</h3></div></div>
+    </div>
+  </div>
+<br>
+<div style="position: relative;">
+  <h1 style="position: absolute; left: 45%;">Команда</h1>
+  <br>
+  <br>
+  <br>
+  <div class = "container7">
+    <div class = "block7"><image src = "кот4.jpeg" class = "image7"></image><h4><strong style="font-size: 20px;">Котовский Леонид</strong><br>директор магазина</h4></div>
+    <div class = "block7"><image src = "кот2.jpg" class = "image7"></image><h4><strong style="font-size: 20px;">Мурло Нина</strong><br>управляющая магазина</h4></div>
+    <div class = "block7"><image src = "кот4.jpg" class = "image7"></image><h4><strong style="font-size: 20px;">Усатов Олег</strong><br>старший продавец-флорист</h4></div>
+  </div>
+  <div class = "container7">
+    <div class = "block7"><image src = "кот6.jpg" class = "image7"></image><h4><strong style="font-size: 20px;">Брыскин Александр</strong><br>продавец-флорист</h4></div>
+    <div class = "block7"><image src = "кот3.jpg" class = "image7"></image><h4><strong style="font-size: 20px;">Кутусина Тамара</strong><br>продавец-флорист</h4></div>
+    <div class = "block7"><image src = "кот5.jpg" class = "image7"></image><h4><strong style="font-size: 20px;">Цапцапкин Виктор</strong><br>курьер</h4></div>
+  </div>
+</div>
+<br>
+<br>
+<div style="display: flex; align-items: center;justify-content: center;">
+  <h1>Наши последние работы</h1><img style = "height: 100px; width: 100px;" src="фото3.gif" alt="Картинка"/></div>
+  <br>
+<div class="container8">
+  <div class = "row">
+    <div class = "block81">
+      <a href="#myForm"><img src="картика2.jpg" alt="Картинка" class = "imgmin"></a>
+    <div class="text-overlay8">
+      <a href="#myForm"><h3>Яркий букет из разноцветных роз</h3></a></div></div>
+    <div class = "block82">
+    <a href="#myForm"><img src="картинка1.jpg" alt="Картинка" class = "imgmax"></a>
+    <div class="text-overlay8">
+    <a href="#myForm"><h3>Роскошная корзинка из роз различных оттенков</h3></a></div></div>
+  </div>
+  <div class="row">
+  <div class = "block81">
+    <a href="#myForm"><img src="картинка5.jpg" alt="Картинка" class = "imgmin"></a>
+    <div class="text-overlay8">
+    <a href="#myForm"><h3>Утонченный букет из гиоцина</h3></a></div></div>
+  <div class = "block81">
+    <a href="#myForm"><img src="картинка4.jpeg" alt="Картинка" class = "imgmin"></a>
+    <div class="text-overlay8">
+    <a href="#myForm"><h3>Воздушный букет из пионов и роз</h3></a></div></div>
+  <div class = "block81">
+    <a href="#myForm"><img src="картикнка3.jpeg" alt="Картинка" class = "imgmin"></a>
+    <div class="text-overlay8">
+    <a href="#myForm"><h3>Загадочный букет из пастельных роз синего оттенка</h3></a></div></div>
+  </div>
+  <div class="row">
+  <div class = "block81">
+    <a href="#myForm"><img src="картинка7.jpg" alt="Картинка" class = "imgmin"></a>
+    <div class="text-overlay8">
+    <a href="#myForm"><h3>Яркий и красочный букет из роз</h3></a></div></div>
+  <div class = "block82">
+    <a href="#myForm"><img src="картинка6.jpg" alt="Картинка" class = "imgmax"></a>
+    <div class="text-overlay8">
+    <a href="#myForm"><h3>Свежий и ароматный букет из полевых цветов</h3></a></div></div>
+  </div>
+  </div>
+  <div style="display: flex; align-items: center;justify-content: center;">
+    <h1>Отзывы</h1><img style = "height: 100px; width: 100px;" src="фото7.gif" alt="Картинка"/></div>
+    <br>
+    <div class="container9">
+  <div class="slider">
+    <div class="slide active">
+        <h3>Людмила</h3>
+        <p>Хочу выразить огромную благодарность вашему магазину за прекрасные цветы! Я регулярно заказываю у вас букеты и всегда остаюсь довольной. Цветы всегда свежие, они радуют глаз и долго сохраняют свою красоту. Доставка всегда точная и вовремя, что очень важно для меня. Вы делаете прекрасную работу, и я всегда с удовольствием рекомендую ваш магазин своим друзьям и знакомым!</p>
+    </div>
+    <div class="slide">
+        <h3>Наталья</h3>
+        <p>Я очень довольна качеством и обслуживанием в вашем магазине цветов. Заказывала букет на свадебное торжество, и результат превзошел все ожидания! Цветы были свежими, яркими и красочными. Букет был собран с большим вкусом, каждый цветок в нем на своем месте. Гостей просто поразила красота аранжировки. Спасибо вам за прекрасное настроение и незабываемые впечатления!</p>
+    </div>
+    <div class="slide">
+        <h3>Александр</h3>
+        <p>Магазин цветов - это настоящая находка! Я заказывал у вас букет на день рождения мамы, и она была просто в восторге! Цветы были свежими и ароматными, а их красота просто завораживала. Очень понравилось, что ваш магазин предлагает разнообразие композиций и дизайнов букетов, так что можно подобрать идеальный вариант под любой случай. Спасибо за ваше профессиональное отношение и великолепные цветочные композиции!</p>
+    </div>
+  </div>
+    <div style="justify-content: center;display: flex;">
+    <div style="width: 80px;" class="arrow left">&lt;</div>
+    <div style="width: 80px;" class="arrow right">&gt;</div>
+  </div>
+</div>
+<br>
+<br>
+<script>
+  // Получаем все слайды и кнопки
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.arrow.left');
+const nextButton = document.querySelector('.arrow.right');
+
+// Устанавливаем начальный индекс слайда
+let currentSlideIndex = 1;
+
+// Функция для отображения текущего слайда
+function showSlide(index) {
+  // Скрываем все слайды
+  slides.forEach((slide) => {
+      slide.classList.remove('active');
+  });
+
+  // Показываем текущий слайд
+  slides[index].classList.add('active');
+}
+
+// Функция для переключения на предыдущий слайд
+function goToPrevSlide() {
+  currentSlideIndex--;
+  if (currentSlideIndex < 0) {
+      currentSlideIndex = slides.length - 1;
+  }
+  showSlide(currentSlideIndex);
+}
+
+// Функция для переключения на следующий слайд
+function goToNextSlide() {
+  currentSlideIndex++;
+  if (currentSlideIndex >= slides.length) {
+      currentSlideIndex = 0;
+  }
+  showSlide(currentSlideIndex);
+}
+
+// Добавляем обработчики событий для кнопок
+prevButton.addEventListener('click', goToPrevSlide);
+nextButton.addEventListener('click', goToNextSlide);
+
+// Показываем первый слайд при загрузке страницы
+showSlide(currentSlideIndex);
+
+</script>
+
+<script>
+  var startX; // Начальная позиция X при нажатии мыши
+  var scrollLeft; // Текущая позиция прокрутки
+
+  // Функция для начала перетаскивания
+  function startDrag(event) {
+    var slider = document.getElementById("imageSlider1");
+    scrollLeft = slider.scrollLeft;
+    slider.style.cursor = "grabbing";
+    slider.addEventListener("mousemove", drag);
+    slider.addEventListener("mouseup", endDrag);
+  }
+
+  // Функция для перетаскивания
+  function drag(event) {
+    var slider = document.getElementById("imageSlider1");
+    var distance = event.clientX - startX;
+    slider.scrollLeft = scrollLeft - distance;
+  }
+
+  // Функция для окончания перетаскивания
+  function endDrag(event) {
+    var slider = document.getElementById("imageSlider1");
+    slider.style.cursor = "grab";
+    slider.removeEventListener("mousemove", drag);
+    slider.removeEventListener("mouseup", endDrag);
+  }
+
+  // Функция для автоматической прокрутки ленты
+  function startAutoScroll(slider) {
+    var images = slider.getElementsByTagName("img");
+    var imageWidth = images[0].width;
+    var currentScrollLeft = 0;
+    var direction = 1; // Направление прокрутки: 1 - вправо, -1 - влево
+
+    setInterval(function() {
+      currentScrollLeft += direction * imageWidth;
+      if (currentScrollLeft >= slider.scrollWidth - slider.clientWidth) {
+        // Достигнут конец вправо, меняем направление на влево
+        direction = -1;
+      } else if (currentScrollLeft <= 0) {
+        // Достигнут конец влево, меняем направление на вправо
+        direction = 1;
+      }
+      slider.scrollLeft = currentScrollLeft;
+    }, 4000); // Измените значение 4000 на нужное вам время задержки (в миллисекундах)
+  }
+</script>
+<div style="display: flex ;flex-direction: column;align-items: center;justify-content: center;">
+  <h1>С нами работают</h1>
+  <h3 style="color: rgb(151, 151, 151);">Десятки компаний доверяют нам самое ценное, что у них есть - улыбки<br>своих любимых. Мы делаем всё, чтобы наше сотрудничество было долгим.</h3>
+
+</div>
+</div>
+<div id="imageSlider1" class="image-slider" onmousedown="startDrag(event)">
+  <img src="партнер1.jpg" alt="Image 1">
+  <img src="партнер2.jpg" alt="Image 2">
+  <img src="партнер3.jpg" alt="Image 3">
+  <img src="партнер4.jpg" alt="Image 4">
+  <img src="партнер5.jpg" alt="Image 5">
+  <img src="партнер6.jpg" alt="Image 6">
+  <img src="партнер7.jpg" alt="Image 7">
+  <img src="партнер8.jpg" alt="Image 8">
+  <img src="партнер9.jpg" alt="Image 9">
+</div>
+
+<script>
+  startAutoScroll(document.getElementById("imageSlider1"));
+</script>
+<script>
+// Функция внутри $( document ).ready() срабатывает после загрузки DOM.
+$(document).ready(function() {
+  console.log( "ready!" );
+  // Поиск элемента в DOM по его id и замена его содержимого innerHTML с помощью JQuery.
+  $("#message").html("Hello world!");
+  
+  // Обработка события клика по кнопкам.
+  $(".btn-slide").click(function () {
+    // Переключение класса кнопки, по которой кликнули.   
+    $(this).toggleClass("active");
+  });
+
+  // Пример анимации.  
+  $(".pane .delete").click(function(){
+     $(this).parents(".pane").animate({ opacity: "hide" }, "slow");
+  });
+
+  // "Аккордион".
+ $(".accordion h3:first").addClass("active");
+ $(".accordion p:not(:first)").hide();
+ $(".accordion h3").click(function () {
+   $(this).next("p").slideToggle("slow")
+     .siblings("p:visible").slideUp("slow");
+   $(this).toggleClass("active");
+   $(this).siblings("h3").removeClass("active");
+ }); 
+}); 
+</script>
+<div class = "otc">
+  <div style="display: flex; align-items: center;justify-content: center;" id = "ser">
+    <h1>Частые вопросы</h1></div>
+<div class="accordion">
+  <ol> 
+  <h3><li style="margin-left: 8px;">Каковы ваши часы работы?</li></h3>
+  <p>Наш магазин цветов открыт с понедельника по субботу с 9 утра до 6 вечера. В воскресенье мы работаем с 10 утра до 4 вечера.</p>
+  <h3><li style="margin-left: 8px;">У вас есть доставка?</li></h3>
+  <p>Да, мы предлагаем услуги доставки цветов. Мы доставляем по городу и в некоторые прилегающие районы. Дополнительные сведения о стоимости и времени доставки можно узнать у наших сотрудников.</p>
+  <h3><li style="margin-left: 8px;">Какие способы оплаты вы принимаете?</li></h3>
+  <p> Мы принимаем наличные, кредитные и дебетовые карты. Вы также можете оплатить заказ онлайн через нашу безопасную платежную систему.</p>
+  <h3><li style="margin-left: 8px;">Могу ли я заказать цветы заранее?</li></h3>
+  <p>Да, мы принимаем предварительные заказы. Если у вас есть конкретные пожелания относительно букета или особых требований, пожалуйста, свяжитесь с нами заранее, чтобы мы могли подготовить заказ к желаемому времени.</p>
+  <h3><li style="margin-left: 8px;">У вас есть цветы для особых мероприятий, таких как свадьбы или юбилеи?</li></h3>
+  <p>Да, мы специализируемся на создании цветочных композиций для особых мероприятий. Пожалуйста, свяжитесь с нами, чтобы обсудить ваши потребности и предпочтения, и мы подберем идеальные цветы и дизайн для вашего особого случая.</p>
+    </ol>
+</div>
+</div>
+<br>
+<footer>
+<div class = "row">
+  <div class = "block91">
+    <div>
+    <h1><strong>Сделать заказ</strong></h1>
+  <h3>Цветы часто используются в качестве символа любви, признания, благодарности или извинения. Они могут выражать нежные чувства и заботу. Цветы также могут быть подарены во время особых событий, таких как дни рождения, свадьбы или юбилеи, чтобы отметить их и сделать их ещё более запоминающимися. Кроме того, цветы могут быть просто приятным и красивым подарком, который может поднять настроение и олицетворить радость и радушие.</h3>
+    </div>
+  <div class = "block93">
+   <div style="display: flex;">
+      <img src = "трубка.png" class = "img93" style="margin-top: 20px;">
+      <h2 style="margin-left: 5px;"><strong>8 900 555-35-35</strong></h2>
+    </div>
+    <div style="display: flex;">
+      <img src = "почта.png" class = "img93" style="margin-top: 20px;">
+      <h2 style="margin-left: 5px;"><strong>sakura@yandex.ru</strong></h2>
+    </div>
+  </div>
+</div>
+</div>
+    <div class = "block92">
+<form 
+id = "myForm"
+  name = "contact-form"
+  class="wedding" 
+  action="https://formcarry.com/s/Mb5Ldx4kyu" 
+  method="POST" 
+  accept-charset="UTF-8" 
+  enctype="multipart/form-data"
+  action=""
+>
+<script>
+  $(function(){
+    $(".wedding").submit(function(e){
+      e.preventDefault();
+      var href = $(this).attr("action");
+      $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: href,
+        data: $(this).serialize(),
+        success: function(response){
+          if(response.status == "success"){
+            alert("Спасибо за ваш заказ!");
+            var frm = document.getElementsByName('contact-form')[0];
+            frm.reset();
+            return false;
+          }else{
+            alert("Произошла ошибка: " + response.message);
+          }
+        }
+      });
+    });
+  });
+</script>
+<div class="form-inner">
+  <div class="form-content">
+  <h3>Ваше имя:</h3>
+  <p><input required type="text" name="your-name" ></p>
+  <h3>Ваш телефон:</h3> 
+  <p><input required type="text" name="your-name" ></p>
+  <div style="display: flex; justify-content: center;" id = "form" class = "radio-image">
+    <p><input required checked="checked" type="radio" name="service_type" value="Букет" style="color: rgb(255, 196, 238);"><img class = "imgform"src="букетз.png"></p>
+    <p><input required type="radio" name="service_type" value="Корзинка"><img class = "imgform"src="корзинказ.png"></p>
+    <p><input required type="radio" name="service_type" value="Горшочек"><img class = "imgform"src="горшочекз.png"></p>
+</div>
+  <h3>Какие цветы вы хотите?</h3>
+  <p>
+  <select name="attending">
+  <option value="Розы">Розы</option>
+  <option value="Тюльпаны">Тюльпаны</option>
+  <option value="Пионы">Пионы</option>
+  <option value="Орхидеи">Орхидеи</option>
+  <option value="Лилии">Лилии</option>
+  <option value="Георгины">Георгины</option>
+  <option value="Подсолнухи">Подсолнухи</option>
+  <option value="Геоцины">Геоцины</option>
+  </select>
+  </p>
+  <p><input type="submit" value="Заказать"></p>
+  </div>
+  </div>
+  </form>
+    </div>
+  </div>
+</footer>
+</body>
