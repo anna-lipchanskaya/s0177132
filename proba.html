@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d4af37;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        form {
+            margin: 20px 0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #d4af37;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Приглашаем на нашу свадьбу!</h1>
+        <p>Дорогие друзья и родные, мы рады пригласить вас на наше торжество.</p>
+        
+        <div class="section">
+            <h2>Дата и место</h2>
+            <p>Дата: 15 сентября 2024 года</p>
+            <p>Место: Ресторан "Золотая осень", ул. Лесная, 25</p>
+        </div>
+        
+        <div class="section">
+            <h2>RSVP</h2>
+            <p>Пожалуйста, подтвердите свое участие до 1 сентября.</p>
+            <form action="https://formspree.io/f/your-email" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Сообщение (если есть)" rows="4"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+        
+        <div class="section gallery">
+            <h2>Наши фотографии</h2>
+            <img src="photo1.jpg" alt="Фото 1">
+            <img src="photo2.jpg" alt="Фото 2">
+            <img src="photo3.jpg" alt="Фото 3">
+        </div>
+        
+        <div class="section">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы, свяжитесь с нами по email: wedding@example.com</p>
+        </div>
+    </div>
+</body>
+</html>
