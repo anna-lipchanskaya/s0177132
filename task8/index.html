@@ -249,47 +249,43 @@
                 <button type="button" class="col-md-4" id="calculate_button" style="background-color:rgba(148, 161, 200, 0.986)">Подсчет</button>
             <br>
         </form>
-<form 
-  action="https://formcarry.com/s/c6CJZmuoM7t"
-  method="POST"
-  enctype="multipart/form-data"
-">
 
-<div class="b-container">
-    <a href="javascript:PopUpShow()">Оставить заявку</a>
-</div>
-<div class="b-popup" id="popup1">
-    <div class="b-popup-content">
-        ФИО:<br/>
-            <input required name="field-name" id = "area"
-            placeholder="Введите ваше ФИО" />
+        
+<form action="https://formcarry.com/s/c6CJZmuoM7t" method="POST" enctype="multipart/form-data">
+            <label>ФИО:<br/>
+                <input required name="name" placeholder="Введите ваше ФИО">
             </label><br />
-            <label>
-            Телефон:<br />
-            <input required name="field-phone" id = "phone"
-            placeholder="Введите ваш телефон" />
-        </label><br />
-        <label>
-            Email:<br/>
-            <input required name="field-email" id = "mail"
-            placeholder="Введите вашу почту" /></label>
-                Дата рождения:<br />
-                <input name="field-date"
-                value="2023-09-14"
-                type="date" />
+
+            <label>Телефон:<br />
+                <input required name="phone" type="tel" placeholder="Введите ваш телефон">
             </label><br />
-            Пол:<br />
-        <label><input type="radio" checked="checked"
-            name="radio-group-1" value="Мужской" />
-            Мужской</label>
-        <label><input type="radio"
-            name="radio-group-1" value="Женский" />
-            Женский</label><br />
-            <label>
-            Любимый язык программирования:
-            <br />
-                <select name="love-language[]" multiple>
-                    <option disabled>Выберите любимый язык пр.</option>
+
+            <label>Email:<br/>
+                <input required name="email" type="email" placeholder="Введите вашу почту">
+            </label><br />
+
+            <label>Организация:<br/>
+                <input required name="company" placeholder="Введите вашу организацию">
+            </label><br />
+
+            <label>Сообщение:<br />
+                <textarea required name="message" placeholder="Введите ваше сообщение"></textarea>
+            </label><br />
+
+            <label><input required type="checkbox" name="agreement"> С контрактом ознакомлен(а)</label><br/>
+
+            <label>Дата рождения:<br />
+                <input required name="birthdate" type="date">
+            </label><br />
+
+            <label>Пол:<br />
+                <input type="radio" name="gender" value="male" checked> Мужской
+                <input type="radio" name="gender" value="female"> Женский
+            </label><br />
+
+            <label>Любимый язык программирования:<br />
+                <select name="love-language[]" multiple required>
+                    <option disabled>Выберите любимый язык</option>
                     <option value="Pascal">Pascal</option>
                     <option value="C">C</option>
                     <option value="C++">C++</option>
@@ -297,24 +293,20 @@
                     <option value="PHP">PHP</option>
                     <option value="Python">Python</option>
                     <option value="Java">Java</option>
-                    <option value="Haskel">Haskel</option>
+                    <option value="Haskell">Haskell</option>
                     <option value="Clojure">Clojure</option>
                     <option value="Prolog">Prolog</option>
-                    <option value="Scala  ">Scala </option>
+                    <option value="Scala">Scala</option>
                 </select>
             </label><br />
-            <label>
-            Биография:<br />
-            <textarea name="field-name-2" placeholder="Ваша биография" ></textarea>
+
+            <label>Биография:<br />
+                <textarea name="biography" placeholder="Ваша биография"></textarea>
             </label><br />
-            <label><input required type="checkbox" checked="checked"
-            name="check-1" />
-            <label>
-                <br />
-                С контрактом ознакомлен(а)</label><br/>
-                <input type="submit" value="Сохранить"/>
-                <br>
-                </form>
+
+            <input type="submit" value="Сохранить">
+            <button type="button" onclick="PopUpHide()">Закрыть</button>
+        </form>
             <div id = "menu">
     <a href="javascript:PopUpHide()" color = "black" >назад</a>
 </div>
