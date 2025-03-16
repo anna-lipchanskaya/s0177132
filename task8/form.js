@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const submitButton = form.querySelector('input[type="submit"]');
-  let controller = new AbortController(); // Контроллер для отмены запроса
+  let controller = new AbortController();
 
   form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Остановка стандартной отправки
-    clearErrors(); // Очистка ошибок
+    event.preventDefault();
+    clearErrors();
 
     let isValid = true;
-    const requiredFields = form.querySelectorAll("input[required], textarea[required]");
+    const requiredFields = form.querySelectorAll("input, textarea, select");
 
-    // Валидация обязательных полей
     requiredFields.forEach((field) => {
       if (field.value.trim() === "") {
         showError(field, "Это поле обязательно для заполнения.");
@@ -18,23 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Дополнительная проверка email
     const emailInput = form.querySelector('input[name="field-email"]');
     if (emailInput && !validateEmail(emailInput.value)) {
       showError(emailInput, "Введите корректный email.");
       isValid = false;
     }
 
-    if (!isValid) return; // Если есть ошибки, прерываем отправку
+    if (!isValid) return;
 
-    // Деактивация кнопки отправки и создание кнопки отмены
     submitButton.disabled = true;
     let cancelButton = document.createElement("button");
     cancelButton.textContent = "Отмена";
     cancelButton.classList.add("cancel-button");
     form.appendChild(cancelButton);
 
-    controller = new AbortController(); // Новый контроллер отмены
+    controller = new AbortController();
 
     cancelButton.addEventListener("click", function () {
       controller.abort(); // Отмена запроса
@@ -48,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const response = await fetch("https://formcarry.com/s/c6CJZmuoM7t", {
         method: "POST",
         body: formData,
-        signal: controller.signal, // Привязка к контроллеру
+        signal: controller.signal,
       });
 
       const result = await response.json();
@@ -67,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showErrorMessage("Ошибка сети. Попробуйте позже.");
       }
     } finally {
-      resetForm(); // Сброс состояния формы
+      resetForm();
     }
   });
 
