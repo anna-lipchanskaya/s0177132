@@ -107,4 +107,3 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".cancel-button")?.remove();
     }
 });
-
