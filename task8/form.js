@@ -110,15 +110,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-jQuery(document).ready(function(){
-    PopUpHide();
-});
-
-function PopUpShow(){
-    jQuery("#popup1").show();
-}
-
-function PopUpHide(){
-    jQuery("#popup1").hide();
-}
-
