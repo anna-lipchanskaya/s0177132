@@ -6,20 +6,76 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
         clearErrors();
-
+        
         let isValid = true;
-        const requiredFields = form.querySelectorAll("input:not([type=submit]):not([type=radio]):not([type=checkbox])[required], textarea[required], select[required]");
+        
+        // Проверка ФИО (только буквы, пробелы и дефисы)
+        const nameInput = form.querySelector('input[name="name"]');
+        const namePattern = /^[А-Яа-яЁёA-Za-z\-\s]+$/;
+        if (!namePattern.test(nameInput.value.trim())) {
+            showError(nameInput, "Введите корректное ФИО (только буквы, пробелы и дефисы).");
+            isValid = false;
+        }
 
-        requiredFields.forEach((field) => {
-            if (field.value.trim() === "") {
-                showError(field, "Это поле обязательно для заполнения.");
-                isValid = false;
-            }
-        });
+        // Проверка телефона (10-15 цифр, возможен + в начале)
+        const phoneInput = form.querySelector('input[name="phone"]');
+        const phonePattern = /^\+?[0-9]{10,15}$/;
+        if (!phonePattern.test(phoneInput.value.trim())) {
+            showError(phoneInput, "Введите корректный номер телефона.");
+            isValid = false;
+        }
 
-        const emailInput = form.querySelector('input[name="field-email"]');
-        if (emailInput && !validateEmail(emailInput.value)) {
+        // Проверка email
+        const emailInput = form.querySelector('input[name="email"]');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value.trim())) {
             showError(emailInput, "Введите корректный email.");
+            isValid = false;
+        }
+
+        // Проверка организации (буквы, цифры, пробелы и дефисы)
+        const companyInput = form.querySelector('input[name="company"]');
+        const companyPattern = /^[А-Яа-яA-Za-z0-9\-\s]+$/;
+        if (!companyPattern.test(companyInput.value.trim())) {
+            showError(companyInput, "Введите корректное название организации.");
+            isValid = false;
+        }
+
+        // Проверка даты рождения (должна быть выбрана)
+        const birthdateInput = form.querySelector('input[name="birthdate"]');
+        if (!birthdateInput.value) {
+            showError(birthdateInput, "Выберите дату рождения.");
+            isValid = false;
+        }
+
+        // Проверка пола (должно быть только male или female)
+        const genderInputs = form.querySelectorAll('input[name="gender"]');
+        let genderValue = Array.from(genderInputs).find(input => input.checked)?.value;
+        if (!["male", "female"].includes(genderValue)) {
+            showError(genderInputs[0], "Выберите корректный пол.");
+            isValid = false;
+        }
+
+        // Проверка выбора языка программирования
+        const languageSelect = form.querySelector('select[name="love-language[]"]');
+        const allowedLanguages = ["Pascal", "C", "C++", "JavaScript", "PHP", "Python", "Java", "Haskell", "Clojure", "Prolog", "Scala"];
+        const selectedLanguages = Array.from(languageSelect.selectedOptions).map(option => option.value);
+        if (selectedLanguages.length === 0 || !selectedLanguages.every(lang => allowedLanguages.includes(lang))) {
+            showError(languageSelect, "Выберите хотя бы один допустимый язык программирования.");
+            isValid = false;
+        }
+
+        // Проверка биографии (минимальная длина 10 символов)
+        const biographyInput = form.querySelector('textarea[name="biography"]');
+        if (biographyInput.value.trim().length < 10) {
+            showError(biographyInput, "Введите хотя бы 10 символов в биографии.");
+            isValid = false;
+        }
+
+        // Проверка чекбокса (должен быть включен)
+        const agreementInput = form.querySelector('input[name="agreement"]');
+        if (!agreementInput.checked) {
+            showError(agreementInput, "Вы должны согласиться с контрактом.");
             isValid = false;
         }
 
@@ -42,38 +98,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
         controller = new AbortController();
 
-        const formData = new FormData(form);
-        try {
-            const response = await fetch("https://formcarry.com/s/c6CJZmuoM7t", {
-                method: "POST",
-                body: formData,
-                signal: controller.signal,
-            });
+        setTimeout(async () => {
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    signal: controller.signal,
+                });
 
-            const result = await response.json();
+                const result = await response.json();
 
-            if (response.ok) {
-                showSuccess("Форма успешно отправлена!");
-                form.reset();
-            } else {
-                showErrorMessage("Ошибка: " + result.message);
+                if (response.ok) {
+                    showSuccess("Форма успешно отправлена!");
+                    form.reset();
+                } else {
+                    showErrorMessage("Ошибка: " + result.message);
+                }
+            } catch (error) {
+                if (error.name === "AbortError") {
+                    showErrorMessage("Запрос был отменён.");
+                } else {
+                    console.error("Ошибка сети:", error);
+                    showErrorMessage("Ошибка сети. Попробуйте позже.");
+                }
+            } finally {
+                resetForm();
             }
-        } catch (error) {
-            if (error.name === "AbortError") {
-                showErrorMessage("Запрос был отменён.");
-            } else {
-                console.error("Ошибка сети:", error);
-                showErrorMessage("Ошибка сети. Попробуйте позже.");
-            }
-        } finally {
-            resetForm();
-        }
+        }, 2000); // Задержка перед отправкой в 2 секунды
     });
-
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
 
     function showError(input, message) {
         const errorElement = document.createElement("div");
