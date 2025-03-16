@@ -226,7 +226,7 @@ h2.text
         color: #333;
     }
 
-    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+    input, textarea, select {
         padding: 10px;
         margin-bottom: 20px;
         border: 1px solid #ccc;
