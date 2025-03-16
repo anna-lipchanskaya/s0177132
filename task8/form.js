@@ -110,12 +110,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function PopUpShow() {
-    const popup = $("#popup1");
-    if (popup.length) popup.show();
+jQuery(document).ready(function(){
+    PopUpHide();
+});
+
+function PopUpShow(){
+    jQuery("#popup1").show();
 }
 
-function PopUpHide() {
-    const popup = $("#popup1");
-    if (popup.length) popup.hide();
+function PopUpHide(){
+    jQuery("#popup1").hide();
 }
+
