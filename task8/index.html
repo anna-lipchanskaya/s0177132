@@ -273,23 +273,21 @@
 <div class="b-popup" id="popup1">
     <div class="b-popup-content">
         ФИО:<br/>
-            <input required name="field-name-1" id = "area"
+            <input required name="name" id = "area"
             placeholder="Введите ваше ФИО" />
             </label><br />
             <label>
             Телефон:<br />
             <input required name="field-phone" id = "phone"
-            type="number"
             placeholder="Введите ваш телефон" />
         </label><br />
         <label>
             Email:<br/>
             <input required name="field-email" id = "mail"
-            type="email"
             placeholder="Введите вашу почту" /></label>
             <label>
                 Организация:<br/>
-                <input required name="field-name-1" id = "orz"
+                <input required name="Company" id = "orz"
                 placeholder="Введите вашу организацию" />
                 </label><br />
                 Сообщение:<br />
@@ -297,6 +295,42 @@
                 </label><br />
                 <label><input required type="checkbox" checked="checked"
                     name="check-1" />
+                     <label>
+                <br />
+                Дата рождения:<br />
+                <input name="field-date"
+                value="2023-09-14"
+                type="date" />
+            </label><br />
+            Пол:<br />
+        <label><input type="radio" checked="checked"
+            name="radio-group-1" value="Значение1" />
+            Мужской</label>
+        <label><input type="radio"
+            name="radio-group-1" value="Значение2" />
+            Женский</label><br />
+            <label>
+            Любимый язык программирования:
+            <br />
+                <select name="love-language[]" multiple>
+                    <option disabled>Выберите любимый язык пр.</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala  ">Scala </option>
+                </select>
+            </label><br />
+            <label>
+            Биография:<br />
+            <textarea name="field-name-2" placeholder="Ваша биография" ></textarea>
+            </label><br />
                 С контрактом ознакомлен(а)</label><br/>
                 <input type="submit" value="Сохранить"/>
                 <br>
