@@ -10,14 +10,6 @@ header {
   margin: 0;
   padding: 0;
   }
-aside{
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
   nav{
     background-color:#ccc;
     border: 2px solid rgba(8, 30, 96, 0.152);
@@ -41,6 +33,9 @@ aside{
   #f{
     display: flex;
     flex-direction: column;
+    justify-content: center;  /* Центрирует по горизонтали */
+    align-items: center;      /* Центрирует по вертикали */
+    height: 100vh;   
   }
   #f section{
     order: 1;
