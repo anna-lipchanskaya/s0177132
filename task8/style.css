@@ -5,11 +5,14 @@ header {
   height:80px;
   }
   body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
-    margin: 0;
-    padding: 0;
-    font-size: 12pt;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
   }
   nav{
     background-color:#ccc;
@@ -201,12 +204,13 @@ h2.text
 }
 
 .form-container {
-  max-width: 600px;
-  margin: 40px auto;
+  width: 100%;
+  max-width: 600px; 
   padding: 20px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; 
 }
 
 h2 {
@@ -218,6 +222,7 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+  
 }
 
 label {
