@@ -5,8 +5,11 @@ header {
   height:80px;
   }
   body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
     font-size: 12pt;
-    padding: 10px;
   }
   nav{
     background-color:#ccc;
