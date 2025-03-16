@@ -33,9 +33,7 @@ header {
   #f{
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Центрирует по горизонтали */
-    align-items: center;      /* Центрирует по вертикали */
-    height: 100vh;   
+    justify-content: center;
   }
   #f section{
     order: 1;
