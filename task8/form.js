@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const birthdateInput = form.querySelector('input[name="birthdate"]');
-        if (!birthdateInput.value) {
+        const birthdatePattern = /^\d{4}-\d{2}-\d{2}$/;
+        if (!birthdateInput.value && !birthdatePattern.test(birthdateInput.value.trim())) {
             showError(birthdateInput, "Выберите дату рождения.");
             isValid = false;
         }
