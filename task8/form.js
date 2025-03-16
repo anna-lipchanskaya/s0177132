@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    PopUpHide();
-
     const form = document.querySelector("form");
     const submitButton = form.querySelector('input[type="submit"]');
     let controller = new AbortController();
