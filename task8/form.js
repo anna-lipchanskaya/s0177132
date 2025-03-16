@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", async function (event) {
     event.preventDefault(); // Останавливаем стандартную отправку
 
-    // Удаляем старые сообщения об ошибках
-    clearErrors();
+    clearErrors(); // Удаляем старые ошибки
 
     let isValid = true;
 
@@ -23,36 +22,36 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
 
-    if (!isValid) return; // Если есть ошибки, прерываем отправку
+    if (!isValid) return; // Если есть ошибки, форма не отправляется
 
-    // Если валидация пройдена, отправляем данные
+    // Если валидация успешна, отправляем форму
     const formData = new FormData(form);
 
     try {
-      const response = await fetch(form.action, {
-        method: form.method,
+      const response = await fetch("https://formcarry.com/s/c6CJZmuoM7t", {
+        method: "POST",
         body: formData,
       });
 
+      const result = await response.json(); // Парсим ответ
+
       if (response.ok) {
-        alert("Форма успешно отправлена!");
+        showSuccess("Форма успешно отправлена!"); // Сообщение об успехе
         form.reset(); // Очищаем форму
       } else {
-        alert("Ошибка при отправке формы.");
+        showErrorMessage("Ошибка при отправке формы: " + result.message);
       }
     } catch (error) {
-      console.error("Ошибка:", error);
-      alert("Ошибка сети.");
+      console.error("Ошибка сети:", error);
+      showErrorMessage("Ошибка сети. Попробуйте позже.");
     }
   });
 
-  // Функция валидации email
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
 
-  // Функция показа ошибки
   function showError(input, message) {
     const errorElement = document.createElement("div");
     errorElement.classList.add("error-message");
@@ -61,7 +60,20 @@ document.addEventListener("DOMContentLoaded", function () {
     input.classList.add("error-border");
   }
 
-  // Функция очистки ошибок
+  function showErrorMessage(message) {
+    const errorContainer = document.createElement("div");
+    errorContainer.classList.add("error-message");
+    errorContainer.textContent = message;
+    form.appendChild(errorContainer);
+  }
+
+  function showSuccess(message) {
+    const successContainer = document.createElement("div");
+    successContainer.classList.add("success-message");
+    successContainer.textContent = message;
+    form.appendChild(successContainer);
+  }
+
   function clearErrors() {
     document.querySelectorAll(".error-message").forEach((el) => el.remove());
     document.querySelectorAll(".error-border").forEach((el) => el.classList.remove("error-border"));
