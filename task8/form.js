@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         
         let isValid = true;
         
-        // Проверка ФИО (только буквы, пробелы и дефисы)
         const nameInput = form.querySelector('input[name="name"]');
         const namePattern = /^[А-Яа-яЁёA-Za-z\-\s]+$/;
         if (!namePattern.test(nameInput.value.trim())) {
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Проверка телефона (10-15 цифр, возможен + в начале)
         const phoneInput = form.querySelector('input[name="phone"]');
         const phonePattern = /^\+?[0-9]{10,15}$/;
         if (!phonePattern.test(phoneInput.value.trim())) {
@@ -25,15 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Проверка email
         const emailInput = form.querySelector('input[name="email"]');
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailInput.value.trim())) {
             showError(emailInput, "Введите корректный email.");
             isValid = false;
         }
-
-        // Проверка организации (буквы, цифры, пробелы и дефисы)
+        
         const companyInput = form.querySelector('input[name="company"]');
         const companyPattern = /^[А-Яа-яA-Za-z0-9\-\s]+$/;
         if (!companyPattern.test(companyInput.value.trim())) {
@@ -41,14 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Проверка даты рождения (должна быть выбрана)
         const birthdateInput = form.querySelector('input[name="birthdate"]');
         if (!birthdateInput.value) {
             showError(birthdateInput, "Выберите дату рождения.");
             isValid = false;
         }
-
-        // Проверка пола (должно быть только male или female)
+        
         const genderInputs = form.querySelectorAll('input[name="gender"]');
         let genderValue = Array.from(genderInputs).find(input => input.checked)?.value;
         if (!["male", "female"].includes(genderValue)) {
@@ -56,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Проверка выбора языка программирования
         const languageSelect = form.querySelector('select[name="love-language[]"]');
         const allowedLanguages = ["Pascal", "C", "C++", "JavaScript", "PHP", "Python", "Java", "Haskell", "Clojure", "Prolog", "Scala"];
         const selectedLanguages = Array.from(languageSelect.selectedOptions).map(option => option.value);
@@ -65,14 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Проверка биографии (минимальная длина 10 символов)
         const biographyInput = form.querySelector('textarea[name="biography"]');
         if (biographyInput.value.trim().length < 10) {
             showError(biographyInput, "Введите хотя бы 10 символов в биографии.");
             isValid = false;
         }
 
-        // Проверка чекбокса (должен быть включен)
         const agreementInput = form.querySelector('input[name="agreement"]');
         if (!agreementInput.checked) {
             showError(agreementInput, "Вы должны согласиться с контрактом.");
@@ -105,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     method: "POST",
                     body: formData,
                     signal: controller.signal,
+                        headers: {
+        "Accept": "application/json"
+    }
                 });
 
                 const result = await response.json();
